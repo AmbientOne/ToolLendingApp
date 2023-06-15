@@ -145,7 +145,7 @@ const Details = () => {
               />
             </Box>
           }
-          onSubmit={(e) => onSubmitModal()}
+          onSubmit={() => onSubmitModal()}
         />
       </Box>
     )

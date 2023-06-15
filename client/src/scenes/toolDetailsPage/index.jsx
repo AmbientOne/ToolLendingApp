@@ -1,5 +1,4 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import Form from "./Details";
 import Navbar from "scenes/navbar";
 import Details from "./Details";
 

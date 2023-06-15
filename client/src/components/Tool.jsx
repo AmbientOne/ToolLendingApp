@@ -2,7 +2,6 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
-import UserImage from "./UserImage";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ConfirmModal from "./ConfirmModal";
 import { useState } from "react";

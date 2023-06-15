@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../../redux/actions";
 
 const GitHubRegistrationForm = () => {
-    const { userId, firstName, lastName, email } = useParams();
+    const { firstName, lastName, email } = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
