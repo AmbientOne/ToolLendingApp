@@ -1,4 +1,4 @@
-import { Box, Button, Grid, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Grid, TextField, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import * as actions from "../../state/tools/toolActions";
 import { useParams } from "react-router-dom";
@@ -29,7 +29,7 @@ const Details = () => {
       }
     });
     fetchLendings();
-  }, [id]);
+  });
   const fetchLendings = () => {
     dispatch(actions.getLendingByToolId(id, token)).then((data) => {
       if (data.success) {

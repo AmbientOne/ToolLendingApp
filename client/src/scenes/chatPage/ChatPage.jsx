@@ -52,7 +52,7 @@ const Chat = () => {
   const { palette } = useTheme();
   const token = useSelector((state) => state.auth?.token);
   const friends = useSelector((state) => state.auth?.user.friends);
-  const [socketConnected, setSocketConnected] = useState(false);
+  const [setSocketConnected] = useState(false);
   const [isChatSelected, setIsChatSelected] = useState(false);
   const [selectedChat, setSelectedChat] = useState();
   const [chats, setChats] = useState([]);
@@ -68,9 +68,6 @@ const Chat = () => {
   const ENDPOINT = process.env.REACT_APP_API_URL;
   let socket= io(ENDPOINT);
   const classes = useStyles();
-  //  useEffect(() => {
-   
-  //  }, [allMessages]);  
 
   const getFriends = async () => {
     const response = await fetch(`${ENDPOINT}/${_id}/friends`, {
@@ -145,7 +142,7 @@ const Chat = () => {
      // setAllMessages([...allMessages, messageData]);
    });
 
-   }, []);
+   });
 
    useEffect(() => {
 
@@ -203,7 +200,7 @@ const Chat = () => {
 
 
 
-   }, [friends, chats])
+   });
 
 
   const createNewChat = async (friendId) => {

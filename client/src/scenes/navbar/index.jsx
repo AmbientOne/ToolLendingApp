@@ -68,7 +68,8 @@ const Navbar = () => {
     };
 
     getPosts();
-  }, [searchQuery, token]); // Run the effect whenever searchQuery or token changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }); // Run the effect whenever searchQuery or token changes
 
 
   const handleSearch = async (query) => {
@@ -117,6 +118,7 @@ const Navbar = () => {
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
           <IconButton onClick={() => dispatch(setMode())}>
+
             {theme.palette.mode === "dark" ? <DarkMode sx={{ fontSize: "25px" }} /> : <LightMode sx={{ color: dark, fontSize: "25px" }} />}
           </IconButton>
 
