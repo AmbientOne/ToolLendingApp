@@ -1,5 +1,4 @@
 import { Box, Button, Grid, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
-import UserImage from "components/UserImage";
 import { useEffect, useState } from "react";
 import * as actions from "../../state/tools/toolActions";
 import { useParams } from "react-router-dom";
